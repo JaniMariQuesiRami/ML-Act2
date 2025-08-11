@@ -1,0 +1,3 @@
+[console_scripts]
+pipeline-demo-train = pipeline_demo.pipeline:cli_train
+pipeline-demo-viz = pipeline_demo.viz:cli_viz

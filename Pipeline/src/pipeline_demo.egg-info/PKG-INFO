@@ -1,0 +1,70 @@
+Metadata-Version: 2.4
+Name: pipeline-demo
+Version: 0.1.0
+Summary: Demo package: scikit-learn Pipeline with training and HTML visualization.
+Author-email: Your Name <you@example.com>
+License: MIT License
+Project-URL: Homepage, https://example.com/pipeline-demo
+Project-URL: Repository, https://example.com/pipeline-demo
+Keywords: scikit-learn,pipeline,mlops,demo
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pandas>=1.3
+Requires-Dist: scikit-learn>=1.2
+Dynamic: license-file
+
+# pipeline-demo
+
+A minimal, publishable Python package demonstrating a scikit-learn Pipeline with:
+- Preprocessing via ColumnTransformer (imputation, scaling, one-hot encoding)
+- A LogisticRegression classifier
+- A small synthetic dataset packaged as CSV
+- Two console scripts: training and pipeline HTML visualization
+
+## Installation
+
+Build and install locally:
+
+```bash
+python -m pip install --upgrade pip
+python -m pip install build
+python -m build
+pip install dist/pipeline_demo-0.1.0-py3-none-any.whl
+```
+
+## Usage
+
+Train and evaluate on the packaged data:
+
+```bash
+pipeline-demo-train
+```
+
+Optionally specify a CSV path:
+
+```bash
+pipeline-demo-train --data path/to/your.csv --test-size 0.2 --random-state 123
+```
+
+Export an HTML diagram of the pipeline to `pipeline_demo.html`:
+
+```bash
+pipeline-demo-viz
+# or choose a path
+pipeline-demo-viz --out my_pipeline.html
+```
+
+## Data
+
+The packaged CSV lives at `pipeline_demo/data/synthetic_customers.csv` and has columns:
+`age, income_gtq, monthly_visits, city, has_kids, churn`.
+
+## License
+
+MIT

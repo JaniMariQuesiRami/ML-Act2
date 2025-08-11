@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pipeline-demo"
+version = "0.1.0"
+description = "Demo package: scikit-learn Pipeline with training and HTML visualization."
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT License" }
+authors = [
+  { name = "Your Name", email = "you@example.com" }
+]
+keywords = ["scikit-learn", "pipeline", "mlops", "demo"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Intended Audience :: Developers",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence"
+]
+dependencies = [
+  "pandas>=1.3",
+  "scikit-learn>=1.2"
+]
+
+[project.urls]
+Homepage = "https://example.com/pipeline-demo"
+Repository = "https://example.com/pipeline-demo"
+
+[project.scripts]
+pipeline-demo-train = "pipeline_demo.pipeline:cli_train"
+pipeline-demo-viz = "pipeline_demo.viz:cli_viz"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"pipeline_demo" = ["data/*.csv"]

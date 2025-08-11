@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+src/pipeline_demo/__init__.py
+src/pipeline_demo/pipeline.py
+src/pipeline_demo/viz.py
+src/pipeline_demo.egg-info/PKG-INFO
+src/pipeline_demo.egg-info/SOURCES.txt
+src/pipeline_demo.egg-info/dependency_links.txt
+src/pipeline_demo.egg-info/entry_points.txt
+src/pipeline_demo.egg-info/requires.txt
+src/pipeline_demo.egg-info/top_level.txt
+src/pipeline_demo/data/synthetic_customers.csv
