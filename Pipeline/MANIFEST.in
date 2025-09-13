@@ -1,3 +1,7 @@
 include README.md
 include LICENSE
+include requirements.txt
+include requirements-dev.txt
+include requirements-conda.txt
+include environment.yml
 recursive-include src/pipeline_demo/data *.csv

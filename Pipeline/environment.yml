@@ -1,0 +1,14 @@
+name: mlops-pipeline
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pandas>=1.3.0
+  - scikit-learn>=1.0.0
+  - numpy>=1.20.0
+  - pip
+  - pip:
+    # Paquetes que solo están disponibles via pip
+    - jupyter
+    # - other-pip-only-packages
